@@ -13,7 +13,7 @@
         'templates.xml',
         'view.xml'
     ],
-    'price': 89.00,
+    'price': 119.00,
     'currency': 'EUR',
     'installable': True,
     'auto_install': False,
