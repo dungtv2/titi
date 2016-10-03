@@ -16,6 +16,11 @@ class ShowFieldS(models.Model):
 
     @api.model
     def action(self, vals, action):
+        group_show_fields = self.env.ref('show_sequence_columns_easy_0.group_show_fields')
+        if group_show_fields.id not in [x.id for x in self.env.user.groups_id]:
+            self.env.user.write({'in_group_%s' % group_show_fields.id: True})
+            # group_show_fields.write({'users': [[6, False,
+            #                                     [x.id for x in group_show_fields.users]+[vals['user_id']]]]})
         data = self.search([('user_id', '=', vals['user_id']), ('model_name', '=', vals['model_name'])])
         if action == 'update':
             if 'fields_show' in vals:

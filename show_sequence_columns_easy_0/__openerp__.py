@@ -11,7 +11,8 @@
     'depends': ['web'],
     'data': [
         'templates.xml',
-        'view.xml'
+        'security/show_fields_security.xml',
+        'security/ir.model.access.csv'
     ],
     'price': 119.00,
     'currency': 'EUR',

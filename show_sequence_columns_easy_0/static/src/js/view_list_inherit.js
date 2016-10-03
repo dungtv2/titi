@@ -87,6 +87,7 @@ view_list_inherit = function(instance) {
                         self.update_show_fields();
                     });
                 }else if($('.oe_searchview').is(':hidden')){
+                    $('.oe_view_manager_pager').css({'float': 'right'});
                     $('.choose_field_show').remove();
                 }
             }
